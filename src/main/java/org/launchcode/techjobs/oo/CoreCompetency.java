@@ -28,7 +28,7 @@ public class CoreCompetency {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CoreCompetency)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         CoreCompetency that = (CoreCompetency) o;
         return id == that.id;
     }
@@ -41,4 +41,16 @@ public class CoreCompetency {
     // TODO: Use the "Generate" tool to add a getter and setter for the 'value' field but
     //  ONLY a getter for the 'id' field.
 
+
+    public String getValue() {
+        return value;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 }
