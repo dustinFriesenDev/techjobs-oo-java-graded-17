@@ -13,6 +13,7 @@ public class Job {
     private PositionType positionType;
     private CoreCompetency coreCompetency;
 
+
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
@@ -28,6 +29,43 @@ public class Job {
         this.location = location;
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
+    }
+
+
+    @Override
+    public String toString(){
+        if(getName().isBlank() && getEmployer().getValue().isBlank() && getLocation().getValue().isBlank() && getPositionType().getValue().isBlank() && getCoreCompetency().getValue().isBlank()){
+            return System.lineSeparator() +
+                    "ID: " + getId() + System.lineSeparator() +
+                    "OOPS! this job does not seem to exist." + System.lineSeparator();
+        }
+
+        if(getName().isEmpty()){
+            setName("Data not available");
+        }
+        if(getEmployer().getValue().isEmpty()){
+            employer.setValue("Data not available");
+        }
+        if(getLocation().getValue().isEmpty()){
+            location.setValue("Data not available");
+        }
+        if(getPositionType().getValue().isEmpty()){
+            positionType.setValue("Data not available");
+        }
+        if(getCoreCompetency().getValue().isEmpty()){
+            coreCompetency.setValue("Data not available");
+        }
+
+
+
+        return System.lineSeparator() +
+                "ID: " + getId() + System.lineSeparator() +
+                "Name: " + getName() + System.lineSeparator() +
+                "Employer: " + getEmployer().getValue() + System.lineSeparator() +
+                "Location: " + getLocation().getValue() + System.lineSeparator() +
+                "Position Type: " + getPositionType().getValue() + System.lineSeparator() +
+                "Core Competency: " + getCoreCompetency().getValue() + System.lineSeparator();
+
     }
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
