@@ -3,7 +3,6 @@ package org.launchcode.techjobs.oo;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertNotEquals;
 
-import org.hamcrest.core.StringStartsWith;
 import org.junit.Test;
 
 public class JobTest {
