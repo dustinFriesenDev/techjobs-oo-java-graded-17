@@ -3,6 +3,7 @@ package org.launchcode.techjobs.oo;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertNotEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class JobTest {
@@ -49,10 +50,13 @@ public class JobTest {
         assertEquals(true, endString);
 
     }
+
+
     @Test
     public void testToStringContainsCorrectLabelsAndData(){
         Job jobCorrectLabel = new Job("QA", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertEquals(System.lineSeparator() + "ID: 4"  + System.lineSeparator() +
+
+        assertEquals(System.lineSeparator() + "ID: " + jobCorrectLabel.getId() + System.lineSeparator() +
                 "Name: QA"  + System.lineSeparator() +
                 "Employer: ACME" + System.lineSeparator() +
                 "Location: Desert" + System.lineSeparator() +
