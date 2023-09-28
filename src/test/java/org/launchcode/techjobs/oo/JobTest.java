@@ -43,7 +43,7 @@ public class JobTest {
     @Test
     public void testToStringStartsAndEndsWithNewLine(){
         Job jobTest1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        String newline = System.lineSeparator();
+        String newline = "\n";
         boolean startString = jobTest1.toString().startsWith(newline);
         boolean endString = jobTest1.toString().endsWith(newline);
         assertEquals(true, startString);
@@ -56,12 +56,13 @@ public class JobTest {
     public void testToStringContainsCorrectLabelsAndData(){
         Job jobCorrectLabel = new Job("QA", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-        assertEquals(System.lineSeparator() + "ID: " + jobCorrectLabel.getId() + System.lineSeparator() +
-                "Name: QA"  + System.lineSeparator() +
-                "Employer: ACME" + System.lineSeparator() +
-                "Location: Desert" + System.lineSeparator() +
-                "Position Type: Quality control" + System.lineSeparator() +
-                "Core Competency: Persistence" + System.lineSeparator(), jobCorrectLabel.toString());
+        assertEquals("\n" +
+                "ID: " + jobCorrectLabel.getId() + "\n" +
+                "Name: QA"  + "\n" +
+                "Employer: ACME" + "\n" +
+                "Location: Desert" + "\n" +
+                "Position Type: Quality control" + "\n" +
+                "Core Competency: Persistence" + "\n", jobCorrectLabel.toString());
 
     }
 

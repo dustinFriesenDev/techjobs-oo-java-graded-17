@@ -51,13 +51,13 @@ public class Job {
             coreCompetency.setValue("Data not available");
         }
 
-        return System.lineSeparator() +
-                "ID: " + getId() + System.lineSeparator() +
-                "Name: " + getName() + System.lineSeparator() +
-                "Employer: " + getEmployer().getValue() + System.lineSeparator() +
-                "Location: " + getLocation().getValue() + System.lineSeparator() +
-                "Position Type: " + getPositionType().getValue() + System.lineSeparator() +
-                "Core Competency: " + getCoreCompetency().getValue() + System.lineSeparator();
+        return "\n" +
+                "ID: " + getId() + "\n" +
+                "Name: " + getName() + "\n" +
+                "Employer: " + getEmployer().getValue() + "\n" +
+                "Location: " + getLocation().getValue() + "\n" +
+                "Position Type: " + getPositionType().getValue() + "\n" +
+                "Core Competency: " + getCoreCompetency().getValue() + "\n";
 
     }
 
